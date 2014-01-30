@@ -22,8 +22,8 @@
 
 	<div class="row">
 
-		<div class="medium-6 columns">	
-			<ul class="medium-block-grid-2" id="container">
+		<div class="medium-12 columns">	
+			<ul class="medium-block-grid-4" id="container">
 			</ul>
 		</div>
 
