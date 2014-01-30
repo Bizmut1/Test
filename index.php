@@ -18,7 +18,6 @@
 
 </head>
 <body>
-
 	<!-- body content here -->
 
 	<div class="row">
@@ -51,11 +50,16 @@
 		var emptyDate = new Date();
 		var date = new Date(r.sys.sunrise * 1000 + emptyDate.getTimezoneOffset() * 60000);
 
-		out += '<p>' + r.name + ', ' + r.sys.country;
-		out +=  date.toUTCString()+ '</p>';
+		out += '<p>' + r.name + ', ' + r.sys.country + '</p>';
+		out += '<p>' + date.toUTCString() + '</p>';
 		out += '<img src="http://openweathermap.org/img/w/' + r.weather[0].icon + '.png" />';
 		out += r.weather[0].description;
 		out += '<p> Temperatóra: ' + r.main.temp + ' &deg;C </p>';
+		out += '<p> Wilgotność powietrza: ' + r.main.humidity + '% </p>';
+		out += '<p> Ciśnienie powietrza: ' + r.main.pressure + ' hPa </p>';
+		out += '<p> Temperatóra min. dnia: ' + r.main.temp_min + ' &deg;C </p>';
+		out += '<p> Temperatóra max. dnia: ' + r.main.temp_max + ' &deg;C </p>';
+		out += '<p> Wiatr: </p>' + '<p> Prędkość: ' + r.wind.speed + ' m/s </p>';
 
 		return out;
 	}
