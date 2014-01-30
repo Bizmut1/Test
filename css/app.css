@@ -8,3 +8,7 @@ body {
 	background: url(http://miriadna.com/desctopwalls/images/max/Perfect-weather.jpg) no-repeat top center;
 	background-size: 100% auto;
 }
+
+p {
+	margin: 0 5px;
+}
