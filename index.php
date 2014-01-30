@@ -36,10 +36,15 @@
     		url: 'getdata.php',
     		dataType: 'json'
     	}).done(function(r){
-    		alert(r);
     		//$('#container').html(r);
-    		var obj= $.parseJSON(r);
-    		$('#container').html('<img src="http://openweathermap.org/img/w/' + obj.weather[0].icon + '.png" />');
+    		//var obj= $.parseJSON(r);
+    		var emptyDate = new Date();
+    		var date = new Date(r.sys.sunrise * 1000 + emptyDate.getTimezoneOffset() * 60000);
+    		$('#container').html('<p>' + r.name + ', ' + r.sys.country );
+    		$('#container').append( date.toUTCString()+ '</p>');
+    		$('#container').append('<img src="http://openweathermap.org/img/w/' + r.weather[0].icon + '.png" />');
+    		$('#container').append(r.weather[0].description);
+    		$('#container').append('<p> Temperatóra: ' + r.main.temp + ' &deg;C </p>');
     	});
     });
   </script>

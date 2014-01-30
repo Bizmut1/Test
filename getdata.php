@@ -11,7 +11,7 @@
 	$data = json_decode($response);
 	/*echo '<pre>';
 	print_r($data); // do wyswietlania zawartosci
-	echo date('h:i:s', $data->sys->sunrise);
+	//echo date('h:i:s', $data->sys->sunrise);
 	echo '</pre>';*/
 
 	//echo '<img src="http://openweathermap.org/img/w/' . $data->weather[0]->icon . '.png" />';
