@@ -54,12 +54,12 @@
 		out += '<p>' + date.toUTCString() + '</p>';
 		out += '<img src="http://openweathermap.org/img/w/' + r.weather[0].icon + '.png" />';
 		out += r.weather[0].description;
-		out += '<p> Temperatóra: ' + r.main.temp + ' &deg;C </p>';
-		out += '<p> Wilgotność powietrza: ' + r.main.humidity + '% </p>';
-		out += '<p> Ciśnienie powietrza: ' + r.main.pressure + ' hPa </p>';
-		out += '<p> Temperatóra min. dnia: ' + r.main.temp_min + ' &deg;C </p>';
-		out += '<p> Temperatóra max. dnia: ' + r.main.temp_max + ' &deg;C </p>';
-		out += '<p> Wiatr: </p>' + '<p> Prędkość: ' + r.wind.speed + ' m/s </p>';
+		out += '<p> <b>Temperatura:</b> ' + r.main.temp + ' &deg;C </p>';
+		out += '<p> <b>Wilgotność powietrza:</b> ' + r.main.humidity + '% </p>';
+		out += '<p> <b>Ciśnienie powietrza:</b> ' + r.main.pressure + ' hPa </p>';
+		out += '<p> <b>Temperatura min. dnia:</b> ' + r.main.temp_min + ' &deg;C </p>';
+		out += '<p> <b>Temperatura max. dnia:</b> ' + r.main.temp_max + ' &deg;C </p>';
+		out += '<p> <b>Wiatr:</b> </p>' + '<p> <b>Prędkość:</b> ' + r.wind.speed + ' m/s </p>';
 
 		return out;
 	}
