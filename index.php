@@ -36,9 +36,6 @@
     		url: 'getdata.php',
     		dataType: 'json'
     	}).done(function(r){
-<<<<<<< HEAD
-    		//$('#container').html(r);
-    		//var obj= $.parseJSON(r);
     		var emptyDate = new Date();
     		var date = new Date(r.sys.sunrise * 1000 + emptyDate.getTimezoneOffset() * 60000);
     		$('#container').html('<p>' + r.name + ', ' + r.sys.country );
@@ -46,9 +43,12 @@
     		$('#container').append('<img src="http://openweathermap.org/img/w/' + r.weather[0].icon + '.png" />');
     		$('#container').append(r.weather[0].description);
     		$('#container').append('<p> Temperatóra: ' + r.main.temp + ' &deg;C </p>');
-=======
-    		$('#container').html('<img src="http://openweathermap.org/img/w/' + r.weather[0].icon + '.png" />');
->>>>>>> f330d478fc4caf038ec6f10a139df785f4074a6f
+    		$('#container').append('<p> Wilgotność powietrza: ' + r.main.humidity + '% </p>');
+    		$('#container').append('<p> Ciśnienie powietrza: ' + r.main.pressure + ' hPa </p>');
+    		$('#container').append('<p> Temperatóra min. dnia: ' + r.main.temp_min + ' &deg;C </p>');
+    		$('#container').append('<p> Temperatóra max. dnia: ' + r.main.temp_max + ' &deg;C </p>');
+    		$('#container').append('<p> Wiatr: </p>' + 
+    								'<p> Prędkość: ' + r.wind.speed + ' m/s </p>');
     	});
     });
   </script>
