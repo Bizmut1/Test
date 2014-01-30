@@ -22,7 +22,7 @@
   <!-- body content here -->
 
   <div class="row">
-  	<div class="medium-6 columns" id="container">
+  	<div class="medium-6 columns panel radius" id="container">
   		
   	</div>
   </div>
@@ -36,6 +36,7 @@
     		url: 'getdata.php',
     		dataType: 'json'
     	}).done(function(r){
+<<<<<<< HEAD
     		//$('#container').html(r);
     		//var obj= $.parseJSON(r);
     		var emptyDate = new Date();
@@ -45,6 +46,9 @@
     		$('#container').append('<img src="http://openweathermap.org/img/w/' + r.weather[0].icon + '.png" />');
     		$('#container').append(r.weather[0].description);
     		$('#container').append('<p> Temperatóra: ' + r.main.temp + ' &deg;C </p>');
+=======
+    		$('#container').html('<img src="http://openweathermap.org/img/w/' + r.weather[0].icon + '.png" />');
+>>>>>>> f330d478fc4caf038ec6f10a139df785f4074a6f
     	});
     });
   </script>

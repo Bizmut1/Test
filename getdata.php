@@ -8,8 +8,9 @@
 
 	curl_close($ch);
 
+	/*
 	$data = json_decode($response);
-	/*echo '<pre>';
+	echo '<pre>';
 	print_r($data); // do wyswietlania zawartosci
 	//echo date('h:i:s', $data->sys->sunrise);
 	echo '</pre>';*/
