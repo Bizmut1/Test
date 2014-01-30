@@ -12,3 +12,9 @@ body {
 p {
 	margin: 0 5px;
 }
+
+#container b {
+	display: inline-block;
+	text-align: right;
+	width: 70%;
+}
