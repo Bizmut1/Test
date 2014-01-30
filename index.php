@@ -23,7 +23,7 @@
 	<div class="row">
 
 		<div class="medium-12 columns">	
-			<ul class="medium-block-grid-4" id="container">
+			<ul class="medium-block-grid-3" id="container">
 			</ul>
 		</div>
 
