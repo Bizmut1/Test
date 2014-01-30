@@ -22,7 +22,7 @@
   <!-- body content here -->
 
   <div class="row">
-  	<div class="medium-6 columns" id="container">
+  	<div class="medium-6 columns panel radius" id="container">
   		
   	</div>
   </div>
@@ -36,10 +36,7 @@
     		url: 'getdata.php',
     		dataType: 'json'
     	}).done(function(r){
-    		alert(r);
-    		//$('#container').html(r);
-    		var obj= $.parseJSON(r);
-    		$('#container').html('<img src="http://openweathermap.org/img/w/' + obj.weather[0].icon + '.png" />');
+    		$('#container').html('<img src="http://openweathermap.org/img/w/' + r.weather[0].icon + '.png" />');
     	});
     });
   </script>
